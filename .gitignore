@@ -1,0 +1,15 @@
+# Entornos virtuales y cachés
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Sistema / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Predicciones de prueba generadas con src/predict.py
+pred*.csv

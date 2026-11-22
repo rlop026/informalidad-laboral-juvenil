@@ -1,0 +1,31 @@
+﻿Variable,Descripcion,Tipo,Unidad,Cardinalidad,Rango o categorias,% faltantes
+ID_PERSONA,Identificador unico de persona (anio-trimestre-UPM-vivienda-hogar-linea),object,texto,12691,12691 categorias,0.0
+ID_HOGAR,Identificador unico de hogar (anio-trimestre-UPM-vivienda-hogar),object,texto,10055,10055 categorias,0.0
+anio,Anio de la encuesta,int64,anio,3,2024 | 2025 | 2026,0.0
+trimestre,Codigo de trimestre del INE,int64,codigo,10,10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 9,0.0
+periodo,Trimestre en formato legible (ej. 2024-T1),object,texto,10,2024-T1 | 2024-T2 | 2024-T3 | 2024-T4 | 2025-T1 | 2025-T2 | ,0.0
+ronda,Ronda de la EPHC,int64,codigo,2,1 | 2,0.0
+informal,"Variable objetivo: 1 = empleo informal, 0 = empleo formal",int64,binaria (0/1),2,0 | 1,0.0
+educ_anios,Anios de estudio aprobados por la persona,float64,anios,19,0.0 a 18.0,0.0
+educ_nivel,Nivel educativo agrupado segun el sistema paraguayo,category,categorica,4,EEB (6-9) | Media (10-12) | Primaria incompleta (0-5) | Supe,0.0
+edad,Edad en anios cumplidos,float64,anios,12,18.0 | 19.0 | 20.0 | 21.0 | 22.0 | 23.0 | 24.0 | 25.0 | 26.0,0.0
+edad_grupo,Grupo etario dentro de 18-29,category,categorica,3,18-21 | 22-25 | 26-29,0.0
+mujer,"1 = mujer, 0 = hombre",int64,binaria (0/1),2,0 | 1,0.0
+estado_civil,Estado civil agrupado,object,categorica,3,"Casado/a o unido/a | Separado/a, divorciado/a o viudo/a | So",0.0
+tam_empresa,Tramo de tamano del establecimiento donde trabaja,float64,categorica,11,-1.0 | 1.0 | 11.0 | 2.0 | 3.0 | 4.0 | 5.0 | 6.0 | 7.0 | 8.0 ,0.0
+ocupacion,Ocupacion principal desempenada,float64,categorica,10,1.0 | 10.0 | 2.0 | 3.0 | 4.0 | 5.0 | 6.0 | 7.0 | 8.0 | 9.0,0.0
+rama,Rama de actividad economica,float64,categorica,7,2.0 | 3.0 | 4.0 | 5.0 | 6.0 | 7.0 | 8.0,0.0
+horas,Horas semanales habituales en la ocupacion principal,float64,horas/semana,97,1.0 a 112.0,0.0
+antiguedad,Anios de antiguedad en el establecimiento,float64,anios,21,0.0 a 20.0,0.0
+rural,"1 = area rural, 0 = area urbana",int64,binaria (0/1),2,0 | 1,0.0
+departamento,Departamento de residencia (agrupado desde ESTGEO),object,categorica,16,16 categorias,0.0
+clima_educativo,Promedio de anios de estudio de los OTROS adultos del hogar,float64,anios (promedio),220,0.0 a 18.0,6.6
+clima_educ_nivel,Nivel educativo agrupado del clima educativo del hogar,category,categorica,4,EEB (6-9) | Media (10-12) | Primaria incompleta (0-5) | Supe,6.6
+otros_informales,Proporcion de informales entre los OTROS ocupados del hogar,float64,proporcion (0 a 1),15,0.0 a 1.0,21.2
+entorno_informal,Categorizacion de 'otros_informales',category,categorica,5,Mayoria | Minoria | Ninguno | Sin otros ocupados | Todos,0.0
+otros_ocupados_n,Cantidad de OTROS miembros ocupados en el hogar,int64,personas,9,0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8,0.0
+tam_hogar,Cantidad de personas que integran el hogar,int64,personas,17,1.0 a 20.0,0.0
+es_jefe,"1 = jefe/a de hogar, 0 = no",int64,binaria (0/1),2,0 | 1,0.0
+ingreso,Ingreso mensual de la ocupacion principal (Gs./mes),float64,Gs./mes,2332,0.0 a 50.000.000.0,0.0
+ingreso_hora,Ingreso mensual / horas mensuales estimadas (Gs./hora),float64,Gs./hora,5915,329.9 a 386.609.6,3.4
+factor,Factor de expansion muestral,float64,personas,1466,30.0 a 4.512.0,0.0

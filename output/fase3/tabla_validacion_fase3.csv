@@ -1,0 +1,10 @@
+Conjunto,Modelo,AUC entren.,AUC valid.,± DE valid.,Brecha,Hiperparámetros
+A completo,Logística,0.8756477772991194,0.8705794582646282,0.007621801849270537,0.00506831903449112,"{'C': 10, 'class_weight': 'balanced'}"
+A completo,Random Forest,0.9497735842944048,0.8810644710969862,0.005632179519599342,0.06870911319741868,"{'class_weight': None, 'max_depth': None, 'min_samples_leaf': 5}"
+A completo,Boosting (HistGB),0.9203692652744545,0.8817163030892188,0.006895709716450335,0.03865296218523573,"{'l2_regularization': 1.0, 'learning_rate': 0.1, 'max_leaf_nodes': 8}"
+B sin tamaño,Logística,0.8228365442506208,0.8081956776677397,0.008107172572483057,0.014640866582881107,"{'C': 0.1, 'class_weight': 'balanced'}"
+B sin tamaño,Random Forest,0.9396687941845958,0.8337260165590308,0.006393765446880482,0.10594277762556503,"{'class_weight': 'balanced', 'max_depth': None, 'min_samples_leaf': 5}"
+B sin tamaño,Boosting (HistGB),0.9356014173419867,0.838486405327246,0.01052049905176663,0.0971150120147406,"{'l2_regularization': 1.0, 'learning_rate': 0.05, 'max_leaf_nodes': 31}"
+C sin tamaño ni hogar,Logística,0.8152318659403219,0.8029308549376984,0.00977427133510512,0.012301011002623485,"{'C': 0.1, 'class_weight': 'balanced'}"
+C sin tamaño ni hogar,Random Forest,0.9156341079970917,0.834444953262558,0.009691480869046911,0.0811891547345337,"{'class_weight': 'balanced', 'max_depth': None, 'min_samples_leaf': 5}"
+C sin tamaño ni hogar,Boosting (HistGB),0.9176290852227238,0.8340014213868046,0.013526872362369187,0.08362766383591924,"{'l2_regularization': 1.0, 'learning_rate': 0.05, 'max_leaf_nodes': 31}"

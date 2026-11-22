@@ -1,0 +1,20 @@
+﻿Etapa,Decision,Registros,Fundamento
+3.4,Nombres de columna unificados a mayusculas,26,FACTOR/Factor/factor y Anoest/anoest varian entre trimestres
+3.6,Apilamiento vertical de 10 trimestres,140128,Los archivos comparten las 154 variables; la union es por concatenacion
+3.4,Identificadores convertidos a entero,140128,El lector de SPSS los entrega como flotante; evita claves con decimales
+3.2,Verificacion de duplicados exactos de fila,0,No se detectaron filas identicas
+3.2,Unicidad de la clave primaria verificada,140128,ANIO+TRIMESTRE+UPM+NVIVI+NHOGA+L02 sin duplicados
+3.3,Codigos de no respuesta convertidos a nulo,195,"Tratarlos como numeros reales distorsionaria medias, rangos y categorias"
+3.5,Variables agregadas del hogar calculadas,140128,"Clima educativo y proporcion de informales entre los OTROS miembros, excluyendo siempre a la propia persona"
+Filtro,Personas con condicion de informalidad definida,55857,El INE define la variable solo para ocupados no agropecuarios
+Filtro,Rango etario de 18 a 29 anios,15023,18 es la edad minima laboral plena; 29 cierra la franja de insercion temprana
+3.2,Se conserva la primera aparicion de cada persona,2325,Dos filas de la misma persona violan el supuesto de independencia
+3.3,Busqueda de ingresos negativos,0,No se detectaron importes imposibles
+3.3,Horas semanales superiores a 112 anuladas,2,112 h equivalen a 16 h diarias los 7 dias; por encima es implausible
+3.3,Ocupados con ingreso cero: se conservan,429,"Son trabajadores familiares no remunerados, categoria valida del mercado laboral"
+3.3,Extremos de ingreso NO tratados como atipicos,0,El INE los imputo por la mediana del grupo; recortarlos seria intervenir un dato ya intervenido
+3.3,TAMA_PEA categoria 10 (trabajo domestico) anulada,1280,"No expresa un tamano de establecimiento y duplicaba a CATE_PEA, descartada"
+3.1,Eliminacion de casos sin anios de estudio,7,Ausencia minima y sin patron (MCAR). La educacion es un predictor central: imputarla alteraria la variable que se quiere medir
+3.1,Faltantes estructurales codificados como 'No aplica' (-1),1277,No son datos ausentes sino preguntas no aplicables o no respondidas
+3.5,Creacion de variables derivadas,12691,Niveles educativos segun el sistema paraguayo; grupos de edad; estado civil agrupado; departamento desde ESTGEO; periodo legible e ingreso por hora
+3.5,Deflactacion de ingresos NO aplicada,0,El proyecto no compara niveles de ingreso entre periodos

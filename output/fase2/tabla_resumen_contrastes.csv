@@ -1,0 +1,41 @@
+﻿ID,Hipotesis,Rol,Prueba,Supuestos,Estadistico,gl,p,IC95,Efecto,Medida_efecto,Decision,Nota,p_Holm,p_BH
+H1,H1 · tamaño del establecimiento,Confirmatoria,Chi-cuadrado de independencia (9 tramos),Esperados ≥ 5 (cumple); independencia: se viola parcialmente (hogares) -> bootstrap por hogar,chi2 = 2643.7,8,0.0,[0.484; 0.519] (bootstrap),0.5007495662405997,V de Cramér,Se rechaza H0,,0.0,0.0
+H1-S1,H1 · sensibilidad (1 persona por hogar),Sensibilidad,Chi-cuadrado,Observaciones independientes por construcción,chi2 = 2120.1,8,0.0,—,0.4962790435455289,V de Cramér,,,,
+H1-S2,H1 · sensibilidad (11 categorías),Sensibilidad,Chi-cuadrado,Esperados ≥ 5,chi2 = 3425.8,10,0.0,—,0.5195581889032472,V de Cramér,,,,
+H1-PH,H1 · post hoc Solo → 2 a 5,Post hoc,z de proporciones (Holm),n·p y n·(1−p) ≥ 5,z = -4.44,—,5.496033724092922e-05,[2.2; 6.0],0.12106033996040377,h de Cohen,,,,
+H1-PH,H1 · post hoc 2 a 5 → 6 a 10,Post hoc,z de proporciones (Holm),n·p y n·(1−p) ≥ 5,z = 16.22,—,2.9523481025632104e-58,[-21.0; -15.9],-0.46805203488529434,h de Cohen,,,,
+H1-PH,H1 · post hoc 6 a 10 → 11 a 20,Post hoc,z de proporciones (Holm),n·p y n·(1−p) ≥ 5,z = 7.96,—,1.1752285843008876e-14,[-20.4; -12.3],-0.3392337913211698,h de Cohen,,,,
+H1-PH,H1 · post hoc 11 a 20 → 21 a 30,Post hoc,z de proporciones (Holm),n·p y n·(1−p) ≥ 5,z = 4.14,—,0.00017195752856055438,[-17.1; -6.2],-0.23313830868666896,h de Cohen,,,,
+H1-PH,H1 · post hoc 21 a 30 → 31 a 50,Post hoc,z de proporciones (Holm),n·p y n·(1−p) ≥ 5,z = 1.02,—,0.37142680604655376,[-9.3; 2.9],-0.06472065534874583,h de Cohen,,,,
+H1-PH,H1 · post hoc 31 a 50 → 51 a 100,Post hoc,z de proporciones (Holm),n·p y n·(1−p) ≥ 5,z = 2.06,—,0.11841789238121814,[-12.0; -0.3],-0.12758913611226474,h de Cohen,,,,
+H1-PH,H1 · post hoc 51 a 100 → 101 a 500,Post hoc,z de proporciones (Holm),n·p y n·(1−p) ≥ 5,z = 3.56,—,0.0014777678769967912,[-14.6; -4.3],-0.20998383035346913,h de Cohen,,,,
+H1-PH,H1 · post hoc 101 a 500 → Más de 500,Post hoc,z de proporciones (Holm),n·p y n·(1−p) ≥ 5,z = 1.32,—,0.37142680604655376,[-9.8; 1.8],-0.09773825648255774,h de Cohen,,,,
+H1-T,H1 · tendencia lineal,Post hoc,Cochran-Armitage,Categorías ordenadas,z = -49.50,—,0.0,—,,—,,,,
+H2-D1,H2 · diagnóstico: linealidad de educ_anios en el logit,Diagnóstico,Wald z del término cuadrático,—,z = 5.29,1,1.206778061768136e-07,—,0.01489699516704816,coeficiente cuadrático,,,,
+H2-R,H2 · referencia LR,Referencia,Razón de verosimilitud (sin agrupar),—,chi2 = 247.5,3,2.3118678791869804e-53,—,,—,,,,
+H2,H2 · educación ajustada,Confirmatoria,Regresión logística múltiple: Wald conjunto (niveles educativos),Linealidad: NO se cumple -> especificación por niveles; sin multicolinealidad; EPV alto; EE por hogar,chi2 = 221.8,3,8.096461891016085e-48,OR Primaria inc. vs Superior [5.24; 16.85],9.392746623809865,OR ajustado (Primaria incompleta vs Superior),Se rechaza H0,,2.4289385673048254e-47,1.214469283652413e-47
+H2-D2,H2 · diagnóstico: Hosmer-Lemeshow (M1 sin educación),Diagnóstico,Hosmer-Lemeshow,—,chi2 = 88.4,8,9.609449602910669e-16,—,,—,,,,
+H2-D2,H2 · diagnóstico: Hosmer-Lemeshow (M2a educación lineal),Diagnóstico,Hosmer-Lemeshow,—,chi2 = 102.0,8,1.6920735553998179e-18,—,,—,,,,
+H2-D2,H2 · diagnóstico: Hosmer-Lemeshow (M2b educación por niveles),Diagnóstico,Hosmer-Lemeshow,—,chi2 = 91.6,8,2.2140795970722357e-16,—,,—,,,,
+H3-R,H3 · referencia LR,Referencia,Razón de verosimilitud (sin agrupar),—,chi2 = 160.2,4,1.3315987094021916e-33,—,,—,,,,
+H3-S2,H3 · sensibilidad: + clima educativo (coef. del clima),Sensibilidad,Regresión logística (Wald z),EE por hogar,z = -4.60,1,4.1527558409491565e-06,—,0.9622657636291212,OR por año de clima educativo,,,,
+H3,H3 · entorno informal del hogar,Confirmatoria,Modelos anidados: Wald conjunto (EE por hogar),Mismos supuestos que H2; EE por hogar; categoría 'Sin otros ocupados' incluida,chi2 = 126.8,4,1.8870261650820012e-26,OR Todos vs Ninguno [1.93; 2.60],2.241507168437108,OR ajustado (Todos vs Ninguno),Se rechaza H0,,3.7740523301640024e-26,2.2644313980984013e-26
+H3-S1,H3 · sensibilidad: proporción continua,Sensibilidad,Regresión logística (Wald z),EE por hogar,z = 11.05,1,2.2610475271204947e-28,OR [1.97; 2.63],2.2763910954252062,OR (0 a 100 % de otros informales),,,,
+H4-D1,"H4 · Shapiro-Wilk, ingreso mensual, Informal, nivel",Diagnóstico,Shapiro-Wilk,—,W = 0.869,—,7.036022086571372e-54,—,,—,,,,
+H4-D1,"H4 · Shapiro-Wilk, ingreso mensual, Informal, log",Diagnóstico,Shapiro-Wilk,—,W = 0.942,—,1.4887439513278364e-40,—,,—,,,,
+H4-D1,"H4 · Shapiro-Wilk, ingreso mensual, Formal, nivel",Diagnóstico,Shapiro-Wilk,—,W = 0.577,—,2.1100214408264758e-69,—,,—,,,,
+H4-D1,"H4 · Shapiro-Wilk, ingreso mensual, Formal, log",Diagnóstico,Shapiro-Wilk,—,W = 0.899,—,5.534652641936152e-44,—,,—,,,,
+H4-D1,"H4 · Shapiro-Wilk, ingreso por hora, Informal, nivel",Diagnóstico,Shapiro-Wilk,—,W = 0.501,—,4.140620538348333e-80,—,,—,,,,
+H4-D1,"H4 · Shapiro-Wilk, ingreso por hora, Informal, log",Diagnóstico,Shapiro-Wilk,—,W = 0.967,—,3.4519669185339416e-32,—,,—,,,,
+H4-D1,"H4 · Shapiro-Wilk, ingreso por hora, Formal, nivel",Diagnóstico,Shapiro-Wilk,—,W = 0.486,—,2.4438457100479786e-73,—,,—,,,,
+H4-D1,"H4 · Shapiro-Wilk, ingreso por hora, Formal, log",Diagnóstico,Shapiro-Wilk,—,W = 0.936,—,4.1649996440301355e-37,—,,—,,,,
+H4-D2,"H4 · Levene (Brown-Forsythe), ingreso mensual",Diagnóstico,Levene,—,W = 680.8,1,4.098777544684482e-146,—,,—,,,,
+H4-D2,"H4 · Levene (Brown-Forsythe), ingreso por hora",Diagnóstico,Levene,—,W = 192.7,1,1.7096059389075378e-43,—,,—,,,,
+H4-R,H4 · referencia: Welch sobre log del ingreso mensual,Referencia,t de Welch,Normalidad no se cumple en el log -> solo referencia,t = -61.4,10771,0.0,razón de medias geométricas [0.519; 0.541],-1.0067689869904204,d de Cohen (log),,,,
+H4-R,H4 · referencia: Welch sobre log del ingreso por hora,Referencia,t de Welch,Normalidad no se cumple en el log -> solo referencia,t = -42.6,8812,0.0,razón de medias geométricas [0.631; 0.657],-0.7599486344083671,d de Cohen (log),,,,
+H4a,H4 · ingreso mensual,Confirmatoria,U de Mann-Whitney (unilateral <),Normalidad rechazada (Shapiro) -> no paramétrica; independencia parcial -> bootstrap por hogar,"z = -54.7 (U = 6,290,108)",—,0.0,"Dif. medianas Gs. [-1,064,183; -997,753] (bootstrap)",-0.6190881405219675,rango-biserial,Se rechaza H0,,0.0,0.0
+H4b,H4 · ingreso por hora,Confirmatoria,U de Mann-Whitney (unilateral <),Normalidad rechazada (Shapiro) -> no paramétrica; independencia parcial -> bootstrap por hogar,"z = -41.0 (U = 8,373,454)",—,0.0,"Dif. medianas Gs./h [-4,477; -3,843] (bootstrap)",-0.4675065273495581,rango-biserial,Se rechaza H0,,0.0,0.0
+H4-S,H4 · sensibilidad: mensual sin ceros,Sensibilidad,U de Mann-Whitney (unilateral <),Idem,z = -52.7,—,0.0,—,-0.60014874973937,rango-biserial,,,,
+H5,H5 · sexo: OR ajustado vs bruto,Confirmatoria,Bootstrap de conglomerados del Δ = log OR ajustado − log OR bruto,Sin supuesto distribucional; remuestreo por hogar respeta la dependencia dentro del hogar,Δ = 0.050,—,0.16783216783216784,Δ [-0.020; 0.135] (bootstrap),1.0512986093017749,cociente OR ajustado / OR bruto,No hay evidencia suficiente para rechazar H0,,0.16783216783216784,0.16783216783216784
+H5-S,H5 · sexo ajustado ≠ 1 (coeficiente en M3),Sensibilidad,Wald z (EE por hogar),Idem H2/H3,z = 3.59,1,0.00032996806797642444,OR [1.098; 1.374],1.227949401964323,OR ajustado,,,,
+H5-B,H5 · sexo bruto (referencia),Referencia,Chi-cuadrado 2x2,Esperados ≥ 5,chi2 = 15.5,1,8.320620899757022e-05,OR [1.081; 1.262] (Woolf),0.034929613803683826,V de Cramér,,,,
